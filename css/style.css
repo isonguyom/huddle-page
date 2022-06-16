@@ -7,6 +7,11 @@
 }
 
 :root {
+  --body-bg: hsl(193, 100%, 96%);
+  --primary-color: hsl(322, 100%, 66%);
+  --font-color: hsl(208, 11%, 55%);
+  --heading-color: hsl(192, 100%, 9%);
+  --container-shadow: 2px 2px 20px hsl(211, 57%, 91%), -2px -2px 20px hsl(211, 57%, 91%)
 }
 
 html,
@@ -14,8 +19,184 @@ body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
-  font-size: 16px;
-  font-family: var(--Family);
+  font-size: 18px;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 400;
+  text-align: center;
+  color: hsl(208, 11%, 55%);
+  line-height: 28px;
 }
 
+img {
+  max-width: 100%;
+}
+
+button {
+  text-transform: capitalize;
+  font-weight: 600;
+  border-radius: 40px;
+  padding: 4px 13px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  color: var(--heading-color);
+}
+
+.onboarding {
+  width: 100%;
+  height: fit-content;
+  background: url("../images/bg-hero-mobile.svg");
+  background-size: cover;
+  box-shadow: 2px 2px 5px hsl(211, 57%, 91%);
+}
+
+.onboarding-overlay {
+  background-color: hsla(209, 11%, 55%, 0.123)
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+}
+
+header>div {
+  width: 40%;
+}
+
+header .logo {
+  display: block;
+  width: 100px;
+}
+
+.header-btn {
+  text-align: right;
+}
+
+.header-btn .tryit-btn {
+  box-shadow: 2px 2px 5px hsl(211, 57%, 91%), -2px -2px 5px hsl(211, 57%, 91%)
+}
+
+.container {
+  padding: 60px 7%;
+  box-shadow: var(--container-shadow);
+  margin:0 5px 35px;
+  position: relative;
+}
+
+.container>div:first-child {
+  margin-bottom: 50px;
+}
+
+.container h2 {
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  line-height: 30px;
+  color: var(--heading-color);
+  font-size: 1.2rem;
+}
+
+.section1 {
+  color: var(--heading-color);
+box-shadow: none;
+}
+
+.pink-btn {
+  background-color: var(--primary-color);
+  color: var(--body-bg);
+  padding: 15px 50px;
+  margin-top: 40px;
+}
+
+.section5 {
+  box-shadow: none;
+}
+
+.section5-content {
+  background-color: var(--body-bg);
+  border-radius: 20px;
+  width: 90%;
+  padding: 50px 15px;
+  margin: 50px auto 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -40px;
+}
+
+.section5-content .pink-btn {
+  margin-top: 0;
+}
+
+footer {
+  background-color: var(--heading-color);
+  padding: 130px 5% 20px;
+  color: var(--body-bg);
+  text-align: left;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+footer .logo {
+  display: block;
+  width: 180px;
+}
+
+.footer1 > div {
+  margin-bottom: 40px;
+}
+
+.footer-address p {
+  display: flex;
+  align-content: flex-start;
+  margin-bottom: 25px;
+}
+
+.footer-address p .add-icon {
+  margin-right: 25px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: var(--body-bg);
+  display: block;
+  padding: 10px 0;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social a {
+  display: inline-block;
+  color: var(--body-bg);
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.footer-social a:hover {
+  color: var(--primary-color);
+}
+
+.footer-social .copyright {
+  margin-top: 20px;
+}

@@ -93,7 +93,7 @@ header .logo {
 .container {
   padding: 60px 7%;
   box-shadow: var(--container-shadow);
-  margin:0 5px 35px;
+  margin: 0 5px 35px;
   position: relative;
 }
 
@@ -101,7 +101,8 @@ header .logo {
   margin-bottom: 50px;
 }
 
-.container h2 {
+.container h2,
+.section5 h2 {
   margin-bottom: 25px;
   text-transform: capitalize;
   line-height: 30px;
@@ -111,7 +112,7 @@ header .logo {
 
 .section1 {
   color: var(--heading-color);
-box-shadow: none;
+  box-shadow: none;
 }
 
 .pink-btn {
@@ -122,19 +123,21 @@ box-shadow: none;
 }
 
 .section5 {
-  box-shadow: none;
+  position: relative;
+  padding: 80px 7%;
+  margin: 0 5px 35px;
 }
 
 .section5-content {
   background-color: var(--body-bg);
-  border-radius: 20px;
+  border-radius: 10px;
   width: 90%;
   padding: 50px 15px;
   margin: 50px auto 0;
   position: absolute;
   left: 0;
   right: 0;
-  top: -40px;
+  top: -5px;
 }
 
 .section5-content .pink-btn {
@@ -142,6 +145,7 @@ box-shadow: none;
 }
 
 footer {
+  width: 100%;
   background-color: var(--heading-color);
   padding: 130px 5% 20px;
   color: var(--body-bg);
@@ -157,7 +161,7 @@ footer .logo {
   width: 180px;
 }
 
-.footer1 > div {
+.footer1>div {
   margin-bottom: 40px;
 }
 
@@ -171,11 +175,15 @@ footer .logo {
   margin-right: 25px;
 }
 
+.footer-address p:last-child {
+  margin-bottom: 0;
+}
+
 .footer-menu a {
   text-decoration: none;
   color: var(--body-bg);
   display: block;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .footer-menu a:hover {
@@ -199,4 +207,68 @@ footer .logo {
 
 .footer-social .copyright {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .onboarding {
+    background-image: url("../images/bg-hero-desktop.svg");
+  }
+
+  .container {
+    height: fit-content;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container>div {
+    width: 45%;
+  }
+
+  .section2 .section2-img {
+    order: 2;
+  }
+
+  .section4 .section4-img {
+    order: 2;
+  }
+
+  .section5-content {
+    width: 60%;
+  }
+
+  .footer1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .footer1>div {
+    width: 48%;
+  }
+
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-social {
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  .section5-content {
+    width: 50%;
+  }
+
+  .footer1>div {
+    width: 30%;
+  }
 }

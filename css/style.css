@@ -11,7 +11,7 @@
   --primary-color: hsl(322, 100%, 66%);
   --font-color: hsl(208, 11%, 55%);
   --heading-color: hsl(192, 100%, 9%);
-  --container-shadow: 2px 2px 20px hsl(211, 57%, 91%), -2px -2px 20px hsl(211, 57%, 91%)
+  --container-shadow: 2px 2px 20px rgba(0, 0, 0, 0.035), -2px -2px 20px rgba(0, 0, 0, 0.035);
 }
 
 html,
@@ -38,6 +38,8 @@ button {
   padding: 4px 13px;
   border: none;
   cursor: pointer;
+  position: relative;
+  transition: .3s ease;
 }
 
 button:hover {
@@ -59,7 +61,7 @@ h6 {
   height: fit-content;
   background: url("../images/bg-hero-mobile.svg");
   background-size: cover;
-  box-shadow: 2px 2px 5px hsl(211, 57%, 91%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.035);
 }
 
 .onboarding-overlay {
@@ -87,7 +89,7 @@ header .logo {
 }
 
 .header-btn .tryit-btn {
-  box-shadow: 2px 2px 5px hsl(211, 57%, 91%), -2px -2px 5px hsl(211, 57%, 91%)
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.035), -2px -2px 5px rgba(0, 0, 0, 0.035);
 }
 
 .container {
@@ -96,6 +98,22 @@ header .logo {
   margin: 0 5px 35px;
   position: relative;
 }
+
+.container.section1 {
+  animation: slideIn 3s ease-in-out;
+}
+
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .container>div:first-child {
   margin-bottom: 50px;
@@ -184,6 +202,7 @@ footer .logo {
   color: var(--body-bg);
   display: block;
   padding: 8px 0;
+  text-transform: capitalize;
 }
 
 .footer-menu a:hover {
@@ -271,4 +290,30 @@ footer .logo {
   .footer1>div {
     width: 30%;
   }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.473);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 4px 7px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-25px);
+  }
+
+  100% {
+    box-shadow: 0 6px 9px 0px rgba(0, 0, 0, 0.473);
+    transform: translatey(0px);
+  }
+}
+
+img.animate,
+.section5-content {
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.473);
+  border-radius: 5px;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
 }

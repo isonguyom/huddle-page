@@ -20,7 +20,7 @@ body {
   text-size-adjust: 100%;
   scroll-behavior: smooth;
   font-size: 18px;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   text-align: center;
   color: hsl(208, 11%, 55%);
@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
   color: var(--heading-color);
 }
 
